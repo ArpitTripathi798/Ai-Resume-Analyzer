@@ -1,3 +1,4 @@
+/* ===== RESET ===== */
 * {
   box-sizing: border-box;
 }
@@ -9,18 +10,18 @@ body {
   min-height: 100vh;
 }
 
-/* Main card */
+/* ===== MAIN CONTAINER ===== */
 .container {
   max-width: 900px;
   margin: 60px auto;
   background: #ffffff;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
   animation: fadeIn 0.8s ease;
 }
 
-/* Animation */
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -32,25 +33,33 @@ body {
   }
 }
 
+/* ===== HEADINGS ===== */
 h1 {
   background: linear-gradient(90deg, #6366f1, #ec4899);
-  background-clip: text;        
-  -webkit-background-clip: text;  
+  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
+  font-size: 36px;
 }
-
 
 h3 {
   margin-top: 30px;
+  font-size: 22px;
 }
 
-/* Upload box */
+h4 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* ===== FILE UPLOAD ===== */
 input[type="file"] {
   padding: 14px;
   border-radius: 12px;
   background: #f1f5f9;
   border: none;
   width: 100%;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
@@ -58,7 +67,7 @@ input[type="file"]:hover {
   transform: scale(1.02);
 }
 
-/* Skill chips */
+/* ===== SKILL TAGS ===== */
 .skill {
   display: inline-block;
   padding: 8px 16px;
@@ -81,11 +90,11 @@ input[type="file"]:hover {
   }
 }
 
-/* Job card */
-.job {
-  margin-top: 18px;
-  padding: 18px;
-  border-radius: 14px;
+/* ===== JOB CARD ===== */
+.job-card {
+  margin-top: 22px;
+  padding: 22px;
+  border-radius: 16px;
   background: linear-gradient(135deg, #eef2ff, #fdf2f8);
   border-left: 6px solid #6366f1;
   animation: slideUp 0.5s ease;
@@ -102,13 +111,51 @@ input[type="file"]:hover {
   }
 }
 
-.job strong {
-  font-size: 18px;
+/* ===== JOB TEXT ===== */
+.job-card p {
+  margin: 8px 0;
 }
 
+.reason {
+  color: #475569;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* ===== APPLY BUTTONS ===== */
+.apply-links {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.apply-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.35);
+  transition: all 0.25s ease;
+}
+
+.apply-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 14px 30px rgba(124, 58, 237, 0.5);
+}
+
+/* ===== DIVIDER ===== */
 hr {
   margin: 35px 0;
   border: none;
   height: 1px;
   background: linear-gradient(to right, transparent, #c7d2fe, transparent);
+}
+
+/* ===== SMALL TEXT ===== */
+p {
+  color: #374151;
 }
