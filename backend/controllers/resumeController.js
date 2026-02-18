@@ -11,8 +11,14 @@ export const analyzeResumePDF = async (req, res) => {
       return res.status(400).json({ message: "No resume uploaded" });
     }
 
-    // ✅ PDF → TEXT (SAFE)
-    const resumeText = await extractTextFromPDF(req.file.buffer);
+    // ✅ SAFE BUFFER CHECK (important for Render)
+    const buffer = req.file?.buffer;
+
+    if (!buffer) {
+      throw new Error("File buffer missing");
+    }
+
+    const resumeText = await extractTextFromPDF(buffer);
     console.log("TEXT LENGTH:", resumeText.length);
 
     if (!resumeText.trim()) {
@@ -54,5 +60,3 @@ export const analyzeResumePDF = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
-
-
