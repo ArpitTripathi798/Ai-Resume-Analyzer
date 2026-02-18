@@ -15,13 +15,12 @@ export default function ResumeUpload({ onUploaded }) {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:5000/api/resume/upload",
+        "https://ai-resume-analyzer.onrender.com/api/resume/upload",
         formData
       );
 
       setSkills(res.data.skills || []);
-      onUploaded(true); // 👈 dashboard stable
-
+      onUploaded(true);
     } catch (err) {
       console.error(err);
       alert("Resume upload failed");

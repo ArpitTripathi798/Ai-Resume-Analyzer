@@ -7,7 +7,7 @@ export default function JobMatches() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/jobs/match")
+      .get("https://ai-resume-analyzer.onrender.com/api/jobs/match")
       .then(res => {
         if (Array.isArray(res.data)) {
           setJobs(res.data);
@@ -57,4 +57,3 @@ export default function JobMatches() {
     </>
   );
 }
-
