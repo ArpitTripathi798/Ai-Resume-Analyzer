@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://ai-resume-analyzer.onrender.com/api",
 });
 
 export const uploadResume = (formData) =>
@@ -11,8 +11,5 @@ export const uploadResume = (formData) =>
     },
   });
 
-// 🔥 ADD THIS
 export const getJobMatches = () =>
   API.get("/jobs/match");
-
-  
