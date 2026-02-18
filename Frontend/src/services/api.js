@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://ai-resume-analyzer.onrender.com/api",
+  baseURL: "https://ai-resume-analyzer-7i9f.onrender.com/api",
 });
 
 export const uploadResume = (formData) =>

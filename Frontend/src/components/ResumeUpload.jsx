@@ -15,7 +15,7 @@ export default function ResumeUpload({ onUploaded }) {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://ai-resume-analyzer.onrender.com/api/resume/upload",
+        "https://ai-resume-analyzer-7i9f.onrender.com/api/resume/upload",
         formData
       );
 
@@ -46,4 +46,3 @@ export default function ResumeUpload({ onUploaded }) {
     </>
   );
 }
-
