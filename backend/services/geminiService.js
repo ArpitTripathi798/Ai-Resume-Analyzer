@@ -36,6 +36,14 @@ ${resumeText}
     console.error("GEMINI SKILL ERROR:", err.message);
 
     // fallback (never empty)
-    return ["JavaScript", "React", "Node.js"];
+    return ["JavaScript",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "HTML",
+      "CSS",
+      "C++",
+      "Python"];
   }
 }
