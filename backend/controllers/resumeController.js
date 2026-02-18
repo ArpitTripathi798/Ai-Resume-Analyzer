@@ -4,12 +4,16 @@ import { extractSkillsWithGemini } from "../services/geminiService.js";
 
 export const analyzeResumePDF = async (req, res) => {
   try {
+    console.log("UPLOAD HIT");
+    console.log("FILE:", req.file);
+
     if (!req.file) {
       return res.status(400).json({ message: "No resume uploaded" });
     }
 
     // ✅ PDF → TEXT (SAFE)
     const resumeText = await extractTextFromPDF(req.file.buffer);
+    console.log("TEXT LENGTH:", resumeText.length);
 
     if (!resumeText.trim()) {
       return res.status(400).json({ message: "Empty resume text" });
@@ -19,7 +23,9 @@ export const analyzeResumePDF = async (req, res) => {
 
     try {
       skills = await extractSkillsWithGemini(resumeText);
-    } catch {
+      console.log("SKILLS:", skills);
+    } catch (err) {
+      console.log("GEMINI FAILED:", err.message);
       skills = [
         "JavaScript",
         "React",
