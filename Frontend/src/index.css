@@ -1,161 +1,156 @@
 /* ===== RESET ===== */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: "Inter", "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f6f7f9;
+  color: #222;
+  line-height: 1.5;
 }
 
-/* ===== MAIN CONTAINER ===== */
+/* ===== CONTAINER ===== */
 .container {
   max-width: 900px;
-  margin: 60px auto;
+  margin: 50px auto;
+  padding: 30px 35px;
   background: #ffffff;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
-  animation: fadeIn 0.8s ease;
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
 /* ===== HEADINGS ===== */
 h1 {
-  background: linear-gradient(90deg, #6366f1, #ec4899);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 36px;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 h3 {
-  margin-top: 30px;
-  font-size: 22px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  color: #333;
 }
 
 h4 {
-  margin: 0;
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
-/* ===== FILE UPLOAD ===== */
-input[type="file"] {
-  padding: 14px;
-  border-radius: 12px;
-  background: #f1f5f9;
-  border: none;
-  width: 100%;
+/* ===== UPLOAD BUTTON ===== */
+.upload-box {
+  display: inline-block;
+  padding: 9px 16px;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: background 0.2s ease;
 }
 
-input[type="file"]:hover {
-  transform: scale(1.02);
+.upload-box:hover {
+  background: #333;
 }
 
 /* ===== SKILL TAGS ===== */
-.skill {
-  display: inline-block;
-  padding: 8px 16px;
-  margin: 6px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #6366f1, #ec4899);
-  color: white;
-  font-size: 14px;
-  animation: pop 0.4s ease;
+.skills {
+  margin-top: 8px;
 }
 
-@keyframes pop {
-  from {
-    transform: scale(0.7);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+.skill {
+  display: inline-block;
+  padding: 5px 11px;
+  margin: 4px 6px 0 0;
+  font-size: 12px;
+  background: #eef1f6;
+  border-radius: 20px;
+  color: #444;
 }
 
 /* ===== JOB CARD ===== */
 .job-card {
-  margin-top: 22px;
-  padding: 22px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #eef2ff, #fdf2f8);
-  border-left: 6px solid #6366f1;
-  animation: slideUp 0.5s ease;
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 8px;
+  background: #fafafa;
+  border: 1px solid #ececec;
+  transition: box-shadow 0.2s ease;
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.job-card:hover {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* ===== JOB TEXT ===== */
 .job-card p {
-  margin: 8px 0;
+  font-size: 13px;
+  color: #555;
+  margin: 5px 0;
 }
 
 .reason {
-  color: #475569;
-  font-size: 14px;
+  font-size: 12px;
+  color: #777;
   margin-top: 6px;
 }
 
 /* ===== APPLY BUTTONS ===== */
-.apply-links {
-  margin-top: 14px;
+.apply-buttons {
+  margin-top: 12px;
   display: flex;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 8px;
 }
 
 .apply-btn {
-  padding: 10px 22px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.35);
-  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+  color: #fff;
 }
 
 .apply-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 14px 30px rgba(124, 58, 237, 0.5);
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+/* Platform Colors (subtle & clean) */
+.linkedin {
+  background: #0a66c2;
+}
+
+.naukri {
+  background: #2e75ff;
+}
+
+.internshala {
+  background: #00a5ec;
+}
+
+.unstop {
+  background: #5b5bd6;
 }
 
 /* ===== DIVIDER ===== */
 hr {
-  margin: 35px 0;
+  margin: 30px 0;
   border: none;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #c7d2fe, transparent);
+  border-top: 1px solid #e5e5e5;
 }
 
-/* ===== SMALL TEXT ===== */
+/* ===== TEXT ===== */
 p {
-  color: #374151;
+  font-size: 14px;
 }

@@ -7,22 +7,25 @@ export default function Dashboard() {
 
   return (
     <div className="container">
-      <h1>AI Resume Analyzer & Job Matcher</h1>
+      <h1 style={{ textAlign: "center" }}>
+        AI Resume Analyzer
+      </h1>
+
+      <p style={{ textAlign: "center", color: "#6b7280", marginBottom: "20px" }}>
+        Upload your resume and instantly discover matching job opportunities
+      </p>
 
       <ResumeUpload onUploaded={setResumeUploaded} />
 
-      <hr />
+      <hr style={{ margin: "30px 0" }} />
 
       {resumeUploaded ? (
         <JobMatches />
       ) : (
         <p style={{ textAlign: "center", color: "#6b7280" }}>
-          Upload resume to see job matches
+          Upload your resume to view personalized job matches
         </p>
       )}
     </div>
   );
 }
-
-
-

@@ -1,17 +1,39 @@
 export const extractSkills = (text = "") => {
-    const skills = [
-        "javascript",
-        "react",
-        "node",
-        "mongodb",
-        "express",
-        "python",
-        "java"
-    ];
+  if (!text) return [];
 
-    return skills.filter(skill =>
-        text.toLowerCase().includes(skill)
-    );
+  const normalizedText = text.toLowerCase();
+
+  const skills = [
+    "javascript",
+    "react",
+    "node",
+    "node.js",
+    "mongodb",
+    "express",
+    "html",
+    "css",
+    "bootstrap",
+    "tailwind",
+    "python",
+    "java",
+    "c++",
+    "c",
+    "typescript",
+    "next",
+    "redux",
+    "mysql",
+    "postgresql",
+    "firebase",
+    "aws",
+    "docker",
+    "git",
+    "github"
+  ];
+
+  const detected = skills.filter(skill =>
+    normalizedText.includes(skill)
+  );
+
+  // remove duplicates & normalize casing
+  return [...new Set(detected.map(s => s.toUpperCase()))];
 };
-
-
